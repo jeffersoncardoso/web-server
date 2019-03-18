@@ -5,10 +5,6 @@ import java.net.Socket;
 import java.nio.file.NoSuchFileException;
 
 public class Index {
-    
-//    private static ArrayList parseHeaders() {;
-//        
-//    }
             
     public static void main(String[] args) {
         try {

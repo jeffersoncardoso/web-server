@@ -5,17 +5,13 @@
  */
 package servidor;
 
-import java.io.BufferedReader;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -24,11 +20,10 @@ import java.util.logging.Logger;
 public class Servidor {
     
     private Socket socket;
-    private String diretorio = "C:/Users/jeffe/Desktop/Projetos Feevale/servidor-web/servidor/src/servidor/www/";
+    private String diretorio;
 
     public Servidor() {
-        
-        
+        this.diretorio = System.getProperty("user.dir").replace("\\", "/") + "/www/";
     }
     
     public Socket ouvir() {
